@@ -9,3 +9,5 @@ test-output/
 src/.DS_Store
 src/main/.DS_Store
 bin
+logs/
+screenshots/
