@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.TestException;
 
 public class SeleniumWrappers {
 	
@@ -97,6 +98,22 @@ public class SeleniumWrappers {
 			Log.error(e.getMessage());
 		}
 		
+	}
+	
+	
+	public WebElement getElement(By locator) {
+		Log.info("called method <getElement>");
+		waitForElementToBeVisible(driver.findElement(locator));
+		WebElement element ;
+		try {
+			element = driver.findElement(locator) ;
+			return element;
+		
+		}catch (Exception e) {
+			Log.error(e.getMessage());
+			throw new TestException("Cannot find element on <getElement> ");
+			
+		}
 	}
 	
 	
