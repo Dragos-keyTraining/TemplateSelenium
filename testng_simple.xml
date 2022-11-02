@@ -2,11 +2,12 @@
 <suite name="Suite1" parallel="tests" thread-count="2">
 
     <test name="Chrome" >
-
-    	<parameter name = "browser" value = "chrome" />
+    	<parameter name ="user" value="TestUser" />
+    	<parameter name ="pass" value="12345@67890" />
+    	<parameter name = "browser" value = "firefox" />
     
         <classes>
-            <class name="tests.IframeExample" ></class>
+            <class name="tests.CookiesLogin" ></class>
             
             
         </classes>

@@ -22,7 +22,7 @@ public class BaseTest extends Driver {
 	public WebDriver driver;
 	
 	@Parameters({"browser"})
-	@BeforeClass(alwaysRun = true)
+	@BeforeMethod(alwaysRun = true)
 	public void setup(String browser) {
 		
 		driver = initDriver(browser);
@@ -32,7 +32,7 @@ public class BaseTest extends Driver {
 	}
 
 	
-	@AfterClass
+	@AfterMethod
 	public void teardown() throws InterruptedException {
 		Thread.sleep(5000);
 		driver.quit();
