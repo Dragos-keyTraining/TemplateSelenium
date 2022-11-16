@@ -7,7 +7,11 @@
     	<parameter name = "browser" value = "chrome" />
     
         <classes>
+<<<<<<< HEAD
             <class name="tests.CookiesLogin" ></class>
+=======
+            <class name="tests.FindBrokenLinks" ></class>
+>>>>>>> curs21
             
             
         </classes>
