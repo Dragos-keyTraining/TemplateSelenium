@@ -25,6 +25,9 @@ public class Driver {
 			WebDriverManager.chromedriver().setup();
 			driver.set(new ChromeDriver(getChromeOptions()));
 			
+	
+			
+			
 			driver.get().manage().window().maximize();
 			driver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			//set window size
